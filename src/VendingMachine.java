@@ -31,7 +31,7 @@ public class VendingMachine {
 			public void run() {
 				replenish();
 				
-				replenishTimer.schedule(this, 1, TimeUnit.SECONDS);
+				replenishTimer.schedule(this, 3, TimeUnit.SECONDS);
 			}
 		}, 0, 3, TimeUnit.SECONDS);
 		
@@ -59,6 +59,7 @@ public class VendingMachine {
 		return new Atomic<Boolean>() {
 			public Boolean atomically() {
 				long currentCookies = cookies.get();
+				
 				if (units > 0 && currentCookies >= units) {
 					cookies.swap(currentCookies - units);
 					return true;
@@ -73,8 +74,9 @@ public class VendingMachine {
 		return new Atomic<Boolean>() {
 			public Boolean atomically() {
 				long currentCandies = candies.get();
+				
 				if (units > 0 && currentCandies >= units) {
-					cookies.swap(currentCandies - units);
+					candies.swap(currentCandies - units);
 					return true;
 				} else {
 					return false;

@@ -15,9 +15,12 @@ public class Main {
 		VendingMachine vendor = VendingMachine.create();
 		
 		CookieMonster monster = new CookieMonster(vendor);
+		WillieWonka wonka = new WillieWonka(vendor);
+		FatAlbert albert = new FatAlbert(vendor);
 		
 		vendor.init();
-		monster.scheduleAndRun();
+		monster.start();
+		wonka.start();
+		albert.start();
 	}
-
 }
