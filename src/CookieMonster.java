@@ -1,7 +1,6 @@
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 import akka.stm.Atomic;
 import akka.stm.Ref;
@@ -9,16 +8,16 @@ import akka.stm.Ref;
 public class CookieMonster {
 	private final VendingMachine vendor;
 	private final Ref<Boolean> keepRunning = new Ref<Boolean>(true);
-	private final Timer timer;
+	private final ScheduledExecutorService executor;
 
 	public CookieMonster(final VendingMachine vendor) {
 		this.vendor = vendor;
-		this.timer = new Timer();
+		this.executor = Executors.newScheduledThreadPool(10);
 	}
 	
 	public void scheduleAndRun() {
 		for (int day = 0; day < 15; day++) {
-			timer.schedule(new TimerTask() {
+			this.executor.schedule(new Runnable() {
 				@Override
 				public void run() {
 					boolean success = CookieMonster.this.vendor.buyCookies(1);
@@ -28,15 +27,15 @@ public class CookieMonster {
 					else
 						System.out.println("Me hungry");
 				}
-			}, day * 1000 + 250);
+			}, day * 1000 + 250, TimeUnit.MILLISECONDS);
 		}
 		
-		timer.schedule(new TimerTask() {
+		this.executor.schedule(new Runnable() {
 			@Override
 			public void run() {
-				timer.cancel();
+				executor.shutdown();
 			}
-		}, 15 * 1000);
+		}, 15, TimeUnit.SECONDS);
 	}
 
 	public void shutdown() {
