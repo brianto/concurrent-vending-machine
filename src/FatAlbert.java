@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class FatAlbert extends Muncher {
@@ -7,8 +8,10 @@ public class FatAlbert extends Muncher {
 
 	@Override
 	void setup() {
+		Random rand = new Random();
+		
 		for (int day = 0; day < 15; day++) {
-			int times = (int) (Math.random() * 3) + 1;
+			int times = rand.nextInt(4) + 1;
 
 			for (int i = 0; i < times; i++) {
 				int dayOffset = day * 1000;

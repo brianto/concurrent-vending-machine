@@ -1,79 +1,97 @@
 Replenish!
-    Me love cookies
-            Hey, hey, hey!
-        The candy man can
-    Me love cookies
-            Hey, hey, hey!
-    Me love cookies
-            Hey, hey, hey!
-        The candy man can
-    Me hungry
-            At least I got candy
-    Me hungry
-        Violet - you're turning violet
-    Me hungry
-Replenish!
-            Hey, hey, hey!
-    Me love cookies
-            Hey, hey, hey!
         The candy man can
             Hey, hey, hey!
-    Me love cookies
             Hey, hey, hey!
-    Me hungry
+    Me love cookies                    ; CookieMonster 1-1
+            Hey, hey, hey!
+    Me love cookies                    ; CookieMonster 1-2
+            Hey, hey, hey!
+    Me hungry                          ; CookieMonster 2-1
             At least I got candy
         Violet - you're turning violet
-    Me hungry
             No food for me today
-    Me hungry
+    Me hungry                          ; CookieMonster 2-2
+            No food for me today
+    Me hungry                          ; CookieMonster 3-1
             No food for me today
         Violet - you're turning violet
             No food for me today
-    Me hungry
-Replenish!
+    Me hungry                          ; CookieMonster 3-2 ~> CookieMonster eats 6 times every 3 days (2x/day)
+Replenish!                             ; Refills every 3 days
             Hey, hey, hey!
     Me love cookies
             Hey, hey, hey!
-        The candy man can
+        The candy man can              ; Wonka 1
     Me love cookies
             Hey, hey, hey!
     Me love cookies
             At least I got candy
+        The candy man can              ; Wonka 2
+            No food for me today
+    Me hungry
+            No food for me today
+            No food for me today
+    Me hungry
+            No food for me today
+        Violet - you're turning violet ; Wonka 3 ~> Wonka eats 3 times every 3 days (1x/day)
+            No food for me today
+    Me hungry
+Replenish!
+            Hey, hey, hey!             ; FatAlbert 1
+    Me love cookies
+            Hey, hey, hey!             ; FatAlbert 2
         The candy man can
-            No food for me today
+    Me love cookies
+            Hey, hey, hey!             ; FatAlbert 3
+    Me love cookies
+            At least I got candy       ; FatAlbert 4
+        The candy man can
+            No food for me today       ; FatAlbert 5
     Me hungry
-            No food for me today
+            No food for me today       ; FatAlbert 6
+            No food for me today       ; FatAlbert 7
     Me hungry
+            No food for me today       ; FatAlbert 8
         Violet - you're turning violet
+            No food for me today       ; FatAlbert 9 ~> FatAlbert eats between 6 and 12 times every 3 days
+    Me hungry
+Replenish!
+            Hey, hey, hey!             ; FatAlbert 1
+    Me love cookies
+            Hey, hey, hey!             ; FatAlbert 2
+        The candy man can
+            Hey, hey, hey!             ; FatAlbert 3
+    Me love cookies
+            Hey, hey, hey!             ; FatAlbert 4
+            At least I got candy       ; FatAlbert 5
+    Me hungry
+            No food for me today       ; FatAlbert 6
+        Violet - you're turning violet
+            No food for me today       ; FatAlbert 7
+    Me hungry
+            No food for me today       ; FatAlbert 8
+            No food for me today       ; FatAlbert 9
+    Me hungry
+            No food for me today       ; FatAlbert 10
+        Violet - you're turning violet
+            No food for me today       ; FatAlbert 11 ~> FatAlbert eats a different amount than the day before
     Me hungry
 Replenish!
             Hey, hey, hey!
+            Hey, hey, hey!
     Me love cookies
             Hey, hey, hey!
         The candy man can
     Me love cookies
             Hey, hey, hey!
-    Me love cookies
-        The candy man can
     Me hungry
             At least I got candy
-    Me hungry
-        Violet - you're turning violet
-    Me hungry
-Replenish!
-            Hey, hey, hey!
-    Me love cookies
-            Hey, hey, hey!
-        The candy man can
-    Me love cookies
-            Hey, hey, hey!
-    Me love cookies
-        The candy man can
-    Me hungry
-            At least I got candy
-    Me hungry
-            No food for me today
         Violet - you're turning violet
             No food for me today
     Me hungry
-Replenish!
+            No food for me today
+    Me hungry
+            No food for me today
+        Violet - you're turning violet
+    Me hungry
+Replenish!                             ; Excluding 1st, replenished 5 times, 3 days in-between ~> 15 day simulation
