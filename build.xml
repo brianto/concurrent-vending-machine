@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project name="concurrent-tsa" default="package">
+	<property name="zipfile" value="${basedir}/vending.zip" />
+
+	<target name="package">
+		<zip update="true" destfile="${zipfile}">
+			<zipfileset dir="${basedir}/src" includes="*.java" />
+			<zipfileset dir="${basedir}" includes="Trace.txt" />
+			<zipfileset dir="${basedir}" includes="README.md" />
+		</zip>
+	</target>
+</project>
