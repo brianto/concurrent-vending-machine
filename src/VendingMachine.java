@@ -29,9 +29,8 @@ public class VendingMachine {
 	public void init() {
 		replenishTimer.scheduleAtFixedRate(new Runnable() {
 			public void run() {
+				System.out.println("Replenish!");
 				replenish();
-				
-				replenishTimer.schedule(this, 3, TimeUnit.SECONDS);
 			}
 		}, 0, 3, TimeUnit.SECONDS);
 		
