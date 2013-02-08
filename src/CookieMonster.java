@@ -14,9 +14,9 @@ public class CookieMonster extends Muncher {
 					boolean success = CookieMonster.this.getVendingMachine().buyCookies(1);
 					
 					if (success)
-						System.out.println("Me love cookies");
+						System.out.println("    Me love cookies");
 					else
-						System.out.println("Me hungry");
+						System.out.println("    Me hungry");
 				}
 			}, day * 1000 + 250, TimeUnit.MILLISECONDS);
 			
@@ -26,9 +26,9 @@ public class CookieMonster extends Muncher {
 					boolean success = CookieMonster.this.getVendingMachine().buyCookies(1);
 					
 					if (success)
-						System.out.println("Me love cookies");
+						System.out.println("    Me love cookies");
 					else
-						System.out.println("Me hungry");
+						System.out.println("    Me hungry");
 				}
 			}, day * 1000 + 750, TimeUnit.MILLISECONDS);
 		}

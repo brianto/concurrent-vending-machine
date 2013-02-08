@@ -14,9 +14,9 @@ public class WillieWonka extends Muncher {
 					boolean success = WillieWonka.this.getVendingMachine().buyCandies(1);
 
 					if (success)
-						System.out.println("The candy man can");
+						System.out.println("        The candy man can");
 					else
-						System.out.println("Violet - you're turning violet");
+						System.out.println("        Violet - you're turning violet");
 				}
 			}, day * 1000 + 500, TimeUnit.MILLISECONDS);
 		}

@@ -23,13 +23,13 @@ public class FatAlbert extends Muncher {
 								.getVendingMachine().buyCandies(1);
 
 						if (cookie && candy)
-							System.out.println("Hey, hey, hey!");
+							System.out.println("            Hey, hey, hey!");
 						else if (cookie)
-							System.out.println("At least I got cookie");
+							System.out.println("            At least I got cookie");
 						else if (candy)
-							System.out.println("At least I got candy");
+							System.out.println("            At least I got candy");
 						else
-							System.out.println("No food for me today");
+							System.out.println("            No food for me today");
 					}
 				}, dayOffset + timeOffset, TimeUnit.MILLISECONDS);
 			}
