@@ -1,6 +1,10 @@
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author James Kuglics
+ * @author Brian To
+ */
 public class FatAlbert extends Muncher {
 	public FatAlbert(final VendingMachine vendor) {
 		super(vendor);
@@ -11,11 +15,12 @@ public class FatAlbert extends Muncher {
 		Random rand = new Random();
 		
 		for (int day = 0; day < 15; day++) {
-			int times = rand.nextInt(4) + 1;
+			// Between 2 and 4 times throughout the day
+			int times = rand.nextInt(3) + 2;
 
 			for (int i = 0; i < times; i++) {
-				int dayOffset = day * 1000;
-				int timeOffset = 1000 / 3 * i;
+				int dayOffset = day * 1000; // Which day
+				int timeOffset = 1000 / 3 * i; // Which part of the day (evenly spaced)
 				
 				this.schedule(new Runnable() {
 					@Override

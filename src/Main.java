@@ -1,14 +1,12 @@
 /**
- * 
- */
-
-/**
- * @author bxt5647
- *
+ * @author James Kuglics
+ * @author Brian To
  */
 public class Main {
 
 	/**
+	 * Run the simulation
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
